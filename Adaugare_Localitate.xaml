@@ -1,0 +1,49 @@
+﻿<Window x:Class="GaraAuto.Adaugare_Localitate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GaraAuto"
+        mc:Ignorable="d"
+        Title="Adaugare_Localitate" Height="336.4" Width="310.8">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Height="70" Width="70" Source="img/logo.png" Grid.RowSpan="2"></Image>
+        <Label Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center">Gara Auto</Label>
+        <Label Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="16" HorizontalAlignment="Center">Date Localitate</Label>
+        
+        <Label Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Denumire</Label>
+        <TextBox Height="25" Grid.Column="1" Grid.Row="2" Name="localitate"/>
+
+        
+        <Label Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center">Raion</Label>
+        <DockPanel Grid.Column="1" Grid.Row="3">
+            <Button DockPanel.Dock="Right" Height="25" Padding="5,0,5,0" Style="{DynamicResource button}" Click="Button_Click_2">Sterge</Button>
+            <ComboBox Height="25" Grid.Column="1" Grid.Row="3" Name="raion"/>
+        </DockPanel>
+        
+
+        <Label Grid.Column="2" Grid.Row="4" FontSize="14" VerticalAlignment="Center" Margin="50,0,30,0" Grid.ColumnSpan="2">Adauga Raion</Label>
+
+        <Label Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center">Denumire</Label>
+        <DockPanel Grid.Column="1" Grid.Row="5">
+            <Button DockPanel.Dock="Right" Height="25" Padding="5,0,5,0" Style="{DynamicResource button}" Click="Button_Click_1">Adauga</Button>
+            <TextBox Height="25"  Name="raionnou"/>
+        </DockPanel>
+
+        <Button x:Name="b" Grid.Row="9" Height="35" VerticalAlignment="Center" FontSize="16" Width="180" Grid.ColumnSpan="2" Style="{DynamicResource button}" Click="Button_Click">Adauga localitate</Button>
+
+    </Grid>
+</Window>

@@ -1,0 +1,61 @@
+﻿<Window x:Class="GaraAuto.Adaugare_Rutiera"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GaraAuto"
+        mc:Ignorable="d"
+        Title="Adaugare_Rutiera" Height="365.667" Width="533.046">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Height="70" Width="70" Source="img/logo.png" Grid.RowSpan="2"></Image>
+        <Label Grid.Row="0" Grid.Column="1" FontSize="20" VerticalAlignment="Center" Margin="10,0,30,0" Grid.ColumnSpan="2">Gara Auto</Label>
+        <Label Grid.Column="2" FontSize="18" VerticalAlignment="Center" Margin="50,0,30,0" Grid.ColumnSpan="2">Date Rutiera</Label>
+
+        <Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center">Denumire</Label>
+        <TextBox Height="25" Grid.Column="3" Grid.Row="2" Name="denumire"/>
+        <Label Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center">Model</Label>
+        <TextBox Height="25" Grid.Column="3" Grid.Row="3" Name="model"/>
+        <Label Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center">Culoare</Label>
+        <ComboBox Height="25" Grid.Column="3" Grid.Row="4" Name="culoare">
+            <ComboBoxItem>Negru</ComboBoxItem>
+            <ComboBoxItem>Alb</ComboBoxItem>
+            <ComboBoxItem>Rosu</ComboBoxItem>
+            <ComboBoxItem>Albastru</ComboBoxItem>
+            <ComboBoxItem>Verde</ComboBoxItem>
+            <ComboBoxItem>Violet</ComboBoxItem>
+            <ComboBoxItem>Oranj</ComboBoxItem>
+            <ComboBoxItem>Galben</ComboBoxItem>
+            <ComboBoxItem>Cafeniu</ComboBoxItem>
+            <ComboBoxItem>Roz</ComboBoxItem>
+            <ComboBoxItem>Purpuriu</ComboBoxItem>
+            <ComboBoxItem>Maro</ComboBoxItem>
+            <ComboBoxItem>Gri</ComboBoxItem>
+        </ComboBox>
+
+        <Label Grid.Row="5" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center">Numar</Label>
+        <TextBox Height="25" Grid.Column="3" Grid.Row="5" Name="numar"/>
+        <Label Grid.Row="6" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center">Numar de locuri</Label>
+        <TextBox Height="25" Grid.Column="3" Grid.Row="6" Name="numarlocuri" PreviewTextInput="Number_PreviewTextInput"/>
+        <Border Grid.Row="2" Grid.RowSpan="4" Grid.ColumnSpan="2" BorderThickness="2" BorderBrush="#3d3938" Margin="15,0">
+            <Image x:Name="imagine"/>
+        </Border>
+       <Button Grid.Row="6" Height="25" VerticalAlignment="Center" FontSize="12" Grid.Column="0" Width="110" Grid.ColumnSpan="2" Style="{DynamicResource button}" Click="Button_Click_1">Adauga imagine</Button>
+        <Button x:Name="b" Grid.Row="9" Height="35" VerticalAlignment="Center" FontSize="16" Grid.Column="0" Width="300" Grid.ColumnSpan="4" Style="{DynamicResource button}" Click="Button_Click">Adauga client</Button>
+    </Grid>
+</Window>
